@@ -17,6 +17,7 @@
     along with de4dot.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#if NET35
 using System;
 using System.Diagnostics;
 using AssemblyData;
@@ -39,8 +40,7 @@ namespace de4dot.code.AssemblyClient {
 				throw new ApplicationException("Server is already loaded");
 
 			var psi = new ProcessStartInfo {
-				Arguments = string.Format("{0} {1} {2}", (int)serviceType,
-							Utils.ShellEscape(ipcName), Utils.ShellEscape(ipcUri)),
+				Arguments = $"{(int)serviceType} {Utils.ShellEscape(ipcName)} {Utils.ShellEscape(ipcUri)}",
 				CreateNoWindow = true,
 				ErrorDialog = false,
 				FileName = filename,
@@ -68,3 +68,4 @@ namespace de4dot.code.AssemblyClient {
 		}
 	}
 }
+#endif
