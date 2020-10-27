@@ -1,4 +1,4 @@
-﻿/*
+/*
     Copyright (C) 2011-2015 de4dot@gmail.com
 
     This file is part of de4dot.
@@ -23,7 +23,7 @@ using System.Runtime.Serialization;
 using System.Threading;
 using AssemblyData;
 
-#if !NET35
+#if !NETFRAMEWORK
 namespace System.Runtime.Remoting {
 	class RemotingException : SystemException {
 	}

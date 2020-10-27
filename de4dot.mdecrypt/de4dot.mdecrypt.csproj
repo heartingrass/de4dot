@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\De4DotCommon.props" />
 
@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\de4dot.blocks\de4dot.blocks.csproj" />
-    <ProjectReference Include="..\dnlib\src\dnlib.csproj" />
   </ItemGroup>
 
 </Project>
